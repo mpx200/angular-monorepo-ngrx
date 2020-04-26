@@ -60,7 +60,7 @@ export interface Servisi {
   telegram: Telegram;
 }
 
-export interface telegraf {
+export interface TelegrafStruktura {
   kategorije: Kategorije[];
   redakcija: Redakcija;
   servisi: Servisi;

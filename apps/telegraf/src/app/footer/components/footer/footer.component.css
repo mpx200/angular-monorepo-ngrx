@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.footer-item {
+  padding: 4px;
+}
+
+.footer-item a {
+  color: white;
+}
