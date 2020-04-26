@@ -17,7 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@a-m-ngrx/models": ["libs/models/src/index.ts"],
-      "@telegraf/*": ["apps/telegraf/src/app/*"],
+      "@telegraf/*": ["apps/telegraf/src/*"],
     }
   },
   "exclude": ["node_modules", "tmp"]

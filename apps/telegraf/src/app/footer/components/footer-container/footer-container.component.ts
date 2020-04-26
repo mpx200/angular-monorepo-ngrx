@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FooterService } from '@telegraf/footer/services';
 import { Observable } from 'rxjs';
 import { Redakcija } from '@a-m-ngrx/models';
+import { Store, select } from '@ngrx/store';
+import { AppState } from '@telegraf/app/state';
+import { getFooterContentStarted, getFooterContent } from '@telegraf/app/footer/state';
 
 @Component({
   selector: 'a-m-ngrx-footer-container',
@@ -10,11 +12,12 @@ import { Redakcija } from '@a-m-ngrx/models';
 })
 export class FooterContainerComponent implements OnInit {
 
-  footerContent$:Observable<Redakcija>;
-  constructor(private footerService: FooterService) { }
+  footerContent$: Observable<Redakcija>;
+  constructor(private store$: Store<AppState>) { }
 
   ngOnInit(): void {
-    this.footerContent$ = this.footerService.getFooterContent();
+    this.store$.dispatch(getFooterContentStarted());
+    this.footerContent$ = this.store$.pipe(select(getFooterContent));
   }
 
 }
