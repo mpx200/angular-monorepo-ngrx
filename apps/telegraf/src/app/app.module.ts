@@ -5,11 +5,14 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { appMetaReducers, appReducer } from './state';
 import { AppComponent } from './app.component';
+import { HeaderModule } from './header/header.module';
+import { NewsContainerComponent } from './news/news-container/news-container.component';
+import { NewsComponent } from './news/news/news.component';
 
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, FooterModule,
+  declarations: [AppComponent, NewsContainerComponent, NewsComponent],
+  imports: [BrowserModule, FooterModule, HeaderModule,
     StoreModule.forRoot(appReducer, {
       metaReducers: appMetaReducers
     }), EffectsModule.forRoot([])],
