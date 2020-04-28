@@ -1,0 +1,5 @@
+<div *ngIf="mainContent$ | async as mainC">
+  <div *ngIf="commentsContent$ | async as commentC">
+    <a-m-ngrx-telegraf-main [mainContent]='mainC' [commentsContent]='commentC'></a-m-ngrx-telegraf-main>
+  </div>
+</div>
