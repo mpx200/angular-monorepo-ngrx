@@ -5,7 +5,7 @@ import { FooterContainerComponent } from './components/footer-container/footer-c
 import { FooterComponent } from './components/footer/footer.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { FooterApiEffects } from './state/effects/flights-api.effects';
+import { FooterApiEffects } from './state/effects/footer-api.effects';
 import { footerReducer, footerFeatureName } from './state';
 
 
