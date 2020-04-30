@@ -8,7 +8,6 @@ import { EffectsModule } from '@ngrx/effects';
 import { FooterApiEffects } from './state/effects/footer-api.effects';
 import { footerReducer, footerFeatureName } from './state';
 
-
 @NgModule({
   declarations: [FooterContainerComponent, FooterComponent],
   imports: [

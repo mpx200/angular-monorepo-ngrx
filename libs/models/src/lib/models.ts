@@ -65,3 +65,15 @@ export interface TelegrafStruktura {
   redakcija: Redakcija;
   servisi: Servisi;
 }
+
+export interface Popular {
+  popular: Popularno[];
+}
+
+export interface Popularno {
+  id: number;
+  title: string;
+  date: number;
+  uri: string;
+  url: string;
+}
