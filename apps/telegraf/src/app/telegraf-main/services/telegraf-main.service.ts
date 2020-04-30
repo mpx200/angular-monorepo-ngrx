@@ -20,4 +20,5 @@ export class TelegrafMainService {
     return this.httpClient.get("https://www.telegraf.rs/api/timeline/comments/naslovna").pipe(
       map((a: Comments) => a.comments));
   }
+
 }

@@ -1,4 +1,4 @@
-<div class="container">
+<!--<div class="container">
 <div class="row">
     <div class="col-9">
       <div class="row row-cols-1 row-cols-md-3">
@@ -15,7 +15,26 @@
       </div>
     </div>
     <div class="col-3">
-      <a-m-ngrx-main-tabs [commentsContent] = 'commentsContent'></a-m-ngrx-main-tabs>
+      <a-m-ngrx-main-tabs [commentsContent] = 'commentsContent' [popularNewsContent] = 'mainContent'></a-m-ngrx-main-tabs>
     </div>
   </div>
-</div>
+</div>-->
+
+<mat-grid-list cols="6" rowHeight="450px">
+  <mat-grid-tile colspan='2' rowspan='2'>
+    <a-m-ngrx-main-tabs style="padding-left: 100px;" [commentsContent] = 'commentsContent' [popularNewsContent] = 'mainContent'></a-m-ngrx-main-tabs>
+  </mat-grid-tile>
+  <mat-grid-tile
+      *ngFor="let vest of mainContent"
+      [colspan]="2"
+      [rowspan]="1">
+      <mat-card style="padding-left: 100px; padding-bottom: 100px;">
+        <img mat-card-image src="https://source.unsplash.com/random?sig={{getRandomNumber()}}" style="height: 250px; width: 250px;" alt="Photo">
+        <mat-card-content>
+          <a [href]="vest.url">{{vest.title}}</a>
+          <p><small class="text-muted">{{vest.date*1000 | date: 'medium'}}</small></p>
+        </mat-card-content>
+      </mat-card>
+  </mat-grid-tile>
+
+</mat-grid-list>

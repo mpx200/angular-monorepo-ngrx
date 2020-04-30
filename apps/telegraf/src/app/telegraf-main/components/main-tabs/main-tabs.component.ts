@@ -1,4 +1,6 @@
-import { Comment } from './../../../../../../../libs/models/src/lib/models';
+import { Observable } from 'rxjs';
+import { TelegrafMainService } from './../../services/telegraf-main.service';
+import { Comment, Popular } from './../../../../../../../libs/models/src/lib/models';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -8,8 +10,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MainTabsComponent implements OnInit {
 
-  constructor() { }
+  chosenList = 'najcitanije';
+  @Input() popularNewsContent: Popular[];
   @Input() commentsContent: Comment[];
+
+  constructor(private tmService: TelegrafMainService) { }
+
+  onClick(chosen: string) {
+    this.chosenList = chosen;
+  }
 
   ngOnInit(): void {
   }
