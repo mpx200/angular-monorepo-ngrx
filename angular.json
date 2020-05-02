@@ -25,7 +25,11 @@
               "apps/telegraf/src/favicon.ico",
               "apps/telegraf/src/assets"
             ],
-            "styles": ["apps/telegraf/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "apps/telegraf/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -83,7 +87,10 @@
               "apps/telegraf/tsconfig.app.json",
               "apps/telegraf/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/telegraf/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/telegraf/**"
+            ]
           }
         },
         "test": {
@@ -110,7 +117,10 @@
               "libs/models/tsconfig.lib.json",
               "libs/models/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/models/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/models/**"
+            ]
           }
         },
         "test": {

@@ -1,0 +1,40 @@
+<!--<ul class="nav nav-tabs">
+  <li class="nav-item" [ngClass] = "{active: chosenList === 'najcitanije'}">
+    <a class="nav-link" (click) = "onClick('najcitanije')" >Najčitanije</a>
+  </li>
+  <li class="nav-item" [ngClass] = "{active: chosenList === 'komentari'}">
+    <a class="nav-link" (click) = "onClick('komentari')">Komentari</a>
+  </li>
+</ul>
+<div *ngIf="chosenList === 'najcitanije'">
+  <a-m-ngrx-main-tab-popular [popularNews] = "popularNewsContent"></a-m-ngrx-main-tab-popular>
+</div>
+<div *ngIf="chosenList === 'komentari'">
+  <a-m-ngrx-main-tab-comments [comments] = "commentsContent"></a-m-ngrx-main-tab-comments>
+</div>-->
+
+<mat-tab-group>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">stars</mat-icon>
+      <span (click) = "onClick('najcitanije')">Najčitanije</span>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">chat</mat-icon>
+      <span (click) = "onClick('komentari')">Komentari</span>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
+
+<div *ngIf="chosenList === 'najcitanije'">
+  <a-m-ngrx-main-tab-popular [popularNews] = "popularNewsContent"></a-m-ngrx-main-tab-popular>
+</div>
+<div *ngIf="chosenList === 'komentari'">
+  <a-m-ngrx-main-tab-comments [comments] = "commentsContent"></a-m-ngrx-main-tab-comments>
+</div>-->
+
+
+
