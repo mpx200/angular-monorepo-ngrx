@@ -1,3 +1,5 @@
 <div *ngFor="let key of objectKeys(mainNewsContent)" class='mainNews-item'>
-  <a [href]="mainNewsContent[key].url">{{mainNewsContent[key].title}}</a>
+  <a [href]="mainNewsContent[key].url">
+    {{mainNewsContent[key].title}}
+  </a>
 </div>

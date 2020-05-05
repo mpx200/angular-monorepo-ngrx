@@ -77,3 +77,14 @@ export interface Popularno {
   uri: string;
   url: string;
 }
+
+export interface Category {
+  kategorije: BiznisNavigation[];
+}
+
+export interface BiznisNavigation {
+  title: string;
+  url: string;
+  slug: string;
+}
+

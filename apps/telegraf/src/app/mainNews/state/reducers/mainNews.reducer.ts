@@ -14,7 +14,8 @@ export const initialState: MainNewsState = {
 
 const reducer = createReducer(
   initialState,
-  on(MainNewsActions.getMainNewsContentDoneSuccessfully, (state, { payload }) => ({
+  on(MainNewsActions.getMainNewsContentDoneSuccessfully,
+     (state, { payload }) => ({
     ...state,
     mainNews: payload,
     errorMessage: null
