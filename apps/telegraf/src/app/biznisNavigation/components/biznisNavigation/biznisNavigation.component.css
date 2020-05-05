@@ -1,7 +1,9 @@
 .objectItem {
-  float: left;
-  padding-left: 10px;
-  background-color: lightblue;
+  display: inline;
+  padding: 10px;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 a {
@@ -21,6 +23,20 @@ a:active {
   color: blue;
 }
 
-.proba {
+.header {
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.headerContainer {
+  text-align: center;
+  background: #14bdcc;
+  height: 50px;
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
+  z-index: 5;
 }
