@@ -1,5 +1,5 @@
 import { createAction, props, union } from '@ngrx/store';
-import { Popularno } from '@a-m-ngrx/models';
+import { BiznisNavigation } from '@a-m-ngrx/models';
 
 export const getBiznisNavigationContentStarted = createAction(
   '[biznisNavigation] Get biznisNavigation content start'
@@ -7,7 +7,7 @@ export const getBiznisNavigationContentStarted = createAction(
 
 export const getBiznisNavigationContentDoneSuccessfully = createAction(
   '[biznisNavigation] Get biznisNavigation content finished',
-  props<{ payload: Popularno[] }>()
+  props<{ payload: BiznisNavigation[] }>()
 );
 
 export const getBiznisNavigationContentFailure = createAction(

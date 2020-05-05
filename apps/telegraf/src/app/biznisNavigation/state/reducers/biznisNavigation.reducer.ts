@@ -1,9 +1,9 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import { BiznisNavigationActions } from '../actions/biznisNavigation.actions';
-import { Popularno } from '@a-m-ngrx/models';
+import { BiznisNavigation } from '@a-m-ngrx/models';
 
 export interface BiznisNavigationState {
-  biznisNavigation: Popularno[];
+  biznisNavigation: BiznisNavigation[];
   errorMessage: string | null;
 }
 
