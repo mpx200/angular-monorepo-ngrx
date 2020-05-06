@@ -1,0 +1,5 @@
+<div *ngIf="newsContent$ | async as newsContent" class="news-container">
+  <h2 class="title-category">Putovanja</h2>
+
+  <a-m-ngrx-news [postoviStruktura]='newsContent'></a-m-ngrx-news>
+</div>

@@ -65,3 +65,25 @@ export interface TelegrafStruktura {
   redakcija: Redakcija;
   servisi: Servisi;
 }
+
+export interface SettingsStruktura {
+  widgetUrl: string;
+}
+
+export interface Post {
+  url: string;
+  comments_url: string;
+  title: string;
+  display_photo: boolean;
+  display_video: boolean;
+  thumbs: any;
+  category_url: string;
+  category_name: string;
+  shares: number;
+  comment_count: number;
+}
+
+export interface PostoviStruktura {
+  settings: SettingsStruktura;
+  posts: Post[];
+}

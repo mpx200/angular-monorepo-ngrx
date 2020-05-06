@@ -1,0 +1,19 @@
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .card-article {
+    margin: 12px;
+    width: 300px;
+
+    .card-image {
+      margin: 0 12px;
+      width: 100%;
+    }
+
+    .comments {
+      margin-left: 12px;
+    }
+  }
+}

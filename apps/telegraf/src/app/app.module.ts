@@ -1,3 +1,4 @@
+import { NewsModule } from './news/news.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FooterModule } from './footer/footer.module';
@@ -6,16 +7,14 @@ import { EffectsModule } from '@ngrx/effects';
 import { appMetaReducers, appReducer } from './state';
 import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
-import { NewsContainerComponent } from './news/news-container/news-container.component';
-import { NewsComponent } from './news/news/news.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent, NewsContainerComponent, NewsComponent],
-  imports: [BrowserModule, FooterModule, HeaderModule,
+  declarations: [AppComponent],
+  imports: [BrowserModule, FooterModule, HeaderModule, NewsModule,
     StoreModule.forRoot(appReducer, {
       metaReducers: appMetaReducers
-    }), EffectsModule.forRoot([])],
+    }), EffectsModule.forRoot([]), BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

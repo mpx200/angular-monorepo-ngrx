@@ -9,7 +9,7 @@ export const getHeaderContentDoneSuccessfully = createAction(
 );
 
 export const getHeaderContentFailure = createAction(
-  'Header] Get header content failure',
+  '[Header] Get header content failure',
   props<{ payload: any }>()
 );
 

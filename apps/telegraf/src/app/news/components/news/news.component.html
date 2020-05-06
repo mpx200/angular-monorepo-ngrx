@@ -1,0 +1,16 @@
+<div class="cards">
+  <mat-card *ngFor="let article of postoviStruktura.posts" class="card-article">
+      <mat-card-header>
+          <mat-card-title>
+            <a href="{{ article.url }}"> {{ article.title }} </a> </mat-card-title>
+          <mat-card-subtitle> {{ article.category_name }} </mat-card-subtitle>
+      </mat-card-header>
+      <img matCardImage src="{{ getIcon(article) }}" class="card-image">
+      <mat-card-content>
+      </mat-card-content>
+      <mat-card-footer class="comments">
+          Komentari:  {{ article.comment_count }}
+      </mat-card-footer>
+  </mat-card>
+</div>
+
